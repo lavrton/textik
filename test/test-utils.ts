@@ -20,7 +20,7 @@ export function addContainer() {
   container.style.position = 'relative';
   container.style.border = '1px solid black';
   container.style.display = 'inline-block';
-  container.style.width = '500px';
+  container.style.width = '300px';
   return container;
 }
 
