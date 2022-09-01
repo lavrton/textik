@@ -1,0 +1,29 @@
+<html>
+  <body>
+    <div id="mocha"></div>
+    <!-- use mocha from CDN instead of local node_modules -->
+    <!-- because somehow parcel is failing do build mocha correctly -->
+    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+    <script src="https://unpkg.com/mocha/mocha.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Alata&family=DynaPuff&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      mocha.setup('bdd');
+    </script>
+    <script type="module">
+      // CORE
+      import './render-test.ts';
+    </script>
+
+    <script>
+      window.onload = () => {
+        mocha.run();
+      };
+    </script>
+    <div id="test-container"></div>
+  </body>
+</html>
